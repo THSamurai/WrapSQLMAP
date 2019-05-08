@@ -1,0 +1,688 @@
+web server operating system: Linux CentOS 6.8
+web application technology: PHP 5.3.3, Apache 2.2.15
+back-end DBMS: MySQL >= 5.0.0
+Database: bart
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| state                 | 66      |
+| customer              | 6       |
+| ordfil                | 6       |
+| invfil                | 4       |
+| empfil                | 2       |
++-----------------------+---------+
+
+Database: exp2013
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| trxfil                | 16210   |
+| hisfil                | 16208   |
+| logfil                | 7158    |
+| pmtfil                | 950     |
+| state                 | 52      |
+| pbook                 | 35      |
+| capfil                | 18      |
+| pending               | 16      |
+| empfil                | 6       |
+| dealer                | 3       |
+| cmpfil                | 1       |
++-----------------------+---------+
+
+Database: exp2012
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| trxfil                | 11999   |
+| hisfil                | 11997   |
+| logfil                | 5042    |
+| pmtfil                | 771     |
+| state                 | 52      |
+| pbook                 | 33      |
+| pending               | 14      |
+| capfil                | 12      |
+| empfil                | 6       |
+| dealer                | 2       |
+| cmpfil                | 1       |
++-----------------------+---------+
+
+Database: exp2011
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| trxfil                | 8237    |
+| hisfil                | 8235    |
+| logfil                | 3093    |
+| pmtfil                | 599     |
+| state                 | 52      |
+| pbook                 | 29      |
+| capfil                | 10      |
+| empfil                | 8       |
+| pending               | 6       |
+| dealer                | 2       |
+| cmpfil                | 1       |
++-----------------------+---------+
+
+Database: exp2010
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| trxfil                | 4715    |
+| hisfil                | 4713    |
+| logfil                | 500     |
+| pmtfil                | 439     |
+| state                 | 52      |
+| pbook                 | 25      |
+| empfil                | 7       |
+| capfil                | 5       |
+| dealer                | 2       |
+| cmpfil                | 1       |
++-----------------------+---------+
+
+Database: exp2016
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| trxfil                | 27593   |
+| hisfil                | 27591   |
+| logfil                | 10426   |
+| pmtfil                | 1512    |
+| state                 | 52      |
+| pbook                 | 43      |
+| capfil                | 31      |
+| pending               | 18      |
+| empfil                | 6       |
+| dealer                | 4       |
+| cmpfil                | 1       |
++-----------------------+---------+
+
+Database: exp2015
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| trxfil                | 24301   |
+| hisfil                | 24299   |
+| logfil                | 9500    |
+| pmtfil                | 1340    |
+| state                 | 52      |
+| pbook                 | 40      |
+| capfil                | 29      |
+| pending               | 18      |
+| empfil                | 6       |
+| dealer                | 3       |
+| cmpfil                | 1       |
++-----------------------+---------+
+
+Database: exp2014
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| trxfil                | 21025   |
+| hisfil                | 21023   |
+| logfil                | 8553    |
+| pmtfil                | 1140    |
+| state                 | 52      |
+| pbook                 | 39      |
+| capfil                | 23      |
+| pending               | 17      |
+| empfil                | 6       |
+| dealer                | 3       |
+| cmpfil                | 1       |
++-----------------------+---------+
+
+Database: tag
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| tag2qt                | 2730    |
+| quote                 | 544     |
+| category              | 153     |
+| cloud                 | 149     |
+| author                | 11      |
+| notes_c               | 11      |
+| images                | 5       |
+| empfil                | 2       |
++-----------------------+---------+
+
+Database: jbfin
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| hisfil                | 352365  |
+| trxfil                | 290401  |
+| logfil                | 53304   |
+| cstlog                | 39260   |
+| emlsent               | 27710   |
+| formsent              | 25457   |
+| pending               | 20072   |
+| pmtfil                | 18232   |
+| autopmt               | 12383   |
+| capfil                | 11574   |
+| intfil                | 7192    |
+| docs                  | 2681    |
+| mntfil                | 1732    |
+| pbook                 | 849     |
+| msgfil                | 722     |
+| funding               | 679     |
+| dlrdrw                | 340     |
+| dealer                | 118     |
+| state                 | 52      |
+| empfil                | 32      |
+| cmpfil                | 1       |
++-----------------------+---------+
+
+Database: decor
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| shopping_cart         | 10643   |
+| cart_users            | 7142    |
+| shopping_cart_hdr     | 3639    |
+| line_items            | 1658    |
+| orders                | 896     |
+| consumer              | 745     |
+| products              | 534     |
+| countries             | 214     |
+| wp_options            | 143     |
+| state                 | 52      |
+| category              | 41      |
+| wp_usermeta           | 15      |
+| dropdown              | 6       |
+| stofil                | 5       |
+| wp_posts              | 3       |
+| shipping_option       | 2       |
+| shipping_option_setup | 1       |
+| wp_comments           | 1       |
+| wp_postmeta           | 1       |
+| wp_term_relationships | 1       |
+| wp_term_taxonomy      | 1       |
+| wp_terms              | 1       |
+| wp_users              | 1       |
++-----------------------+---------+
+
+Database: bps2
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| shopping_cart         | 1219    |
+| cart_users            | 990     |
+| shopping_cart_hdr     | 78      |
+| state                 | 52      |
+| line_items            | 39      |
+| orders                | 26      |
+| consumer              | 15      |
+| products              | 11      |
+| shipping_option       | 4       |
+| shipping_option_setup | 1       |
++-----------------------+---------+
+
+Database: kensington
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| state                 | 52      |
+| cart_users            | 21      |
+| shopping_cart         | 19      |
+| shopping_cart_hdr     | 15      |
+| line_items            | 13      |
+| orders                | 13      |
+| shipping_option       | 4       |
+| category              | 2       |
+| products              | 2       |
+| consumer              | 1       |
+| shipping_option_setup | 1       |
++-----------------------+---------+
+
+Database: bella
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| wp_options            | 172     |
+| wp_postmeta           | 135     |
+| wp_comments           | 111     |
+| wp_posts              | 44      |
+| wp_usermeta           | 19      |
+| wp_commentmeta        | 12      |
+| wp_term_relationships | 4       |
+| wp_term_taxonomy      | 2       |
+| wp_terms              | 2       |
+| wp_users              | 1       |
++-----------------------+---------+
+
+Database: ftest
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| trxfil                | 10283   |
+| hisfil                | 10241   |
+| logfil                | 6255    |
+| autopmt               | 2920    |
+| cstlog                | 1477    |
+| pmtfil                | 1088    |
+| docs                  | 1009    |
+| pending               | 763     |
+| intfil                | 564     |
+| msgfil                | 190     |
+| state                 | 52      |
+| dealer                | 43      |
+| capfil                | 9       |
+| empfil                | 4       |
+| formsent              | 3       |
+| cmpfil                | 1       |
+| mntfil                | 1       |
++-----------------------+---------+
+
+Database: atlas
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| state                 | 52      |
+| category              | 20      |
+| images                | 8       |
+| products              | 4       |
++-----------------------+---------+
+
+Database: alco
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| logfil                | 11207   |
+| hisfil                | 6353    |
+| trxfil                | 6353    |
+| pmtfil                | 398     |
+| state                 | 52      |
+| capfil                | 17      |
+| cstlog                | 17      |
+| formsent              | 14      |
+| empfil                | 6       |
+| dealer                | 5       |
+| cmpfil                | 1       |
+| pbook                 | 1       |
++-----------------------+---------+
+
+Database: chouse
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| info                  | 3       |
+| empfil                | 2       |
++-----------------------+---------+
+
+Database: express
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| trxfil                | 30518   |
+| hisfil                | 30516   |
+| logfil                | 11369   |
+| pmtfil                | 1671    |
+| state                 | 52      |
+| pbook                 | 44      |
+| capfil                | 33      |
+| pending               | 18      |
+| empfil                | 6       |
+| dealer                | 4       |
+| cmpfil                | 1       |
++-----------------------+---------+
+
+Database: ssp
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| countries             | 214     |
+| state                 | 52      |
+| shopping_cart         | 40      |
+| cart_users            | 33      |
+| line_items            | 23      |
+| shopping_cart_hdr     | 20      |
+| orders                | 15      |
+| products              | 7       |
+| consumer              | 4       |
+| category              | 1       |
++-----------------------+---------+
+
+Database: lyndon
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| line_items            | 1098    |
+| cart_users            | 969     |
+| shopping_cart         | 567     |
+| shopping_cart_hdr     | 560     |
+| products              | 385     |
+| orders                | 362     |
+| consumer              | 250     |
+| countries             | 214     |
+| state                 | 66      |
+| vendorli              | 57      |
+| vendorpo              | 10      |
+| category              | 5       |
+| dropdown              | 2       |
+| shipping_option       | 2       |
+| shipping_option_setup | 1       |
+| vendor                | 1       |
++-----------------------+---------+
+
+Database: wh
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| epc_calendar          | 850     |
+| mlist                 | 397     |
+| countries             | 214     |
+| docs                  | 124     |
+| state                 | 52      |
+| usrfil                | 9       |
+| flinks                | 6       |
+| category              | 5       |
++-----------------------+---------+
+
+Database: jmo
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| wp_commentmeta        | 8363    |
+| wp_comments           | 2462    |
+| wp_options            | 195     |
+| wp_postmeta           | 105     |
+| wp_posts              | 34      |
+| wp_usermeta           | 25      |
+| wp_term_relationships | 9       |
+| wp_links              | 7       |
+| wp_term_taxonomy      | 2       |
+| wp_terms              | 2       |
+| wp_users              | 1       |
++-----------------------+---------+
+
+Database: buysimi
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| images                | 387     |
+| dealer                | 86      |
+| state                 | 52      |
+| products              | 32      |
+| category              | 15      |
+| empfil                | 3       |
+| about                 | 2       |
+| stores                | 2       |
+| users                 | 2       |
+| dlrlog                | 1       |
+| mlist                 | 1       |
+| orderdetail           | 1       |
+| orders                | 1       |
+| shopping_cart         | 1       |
++-----------------------+---------+
+
+Database: sftire
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| his_line              | 331937  |
+| hisfil                | 171340  |
+| cusfil                | 44260   |
+| logfil                | 36383   |
+| invfil                | 13196   |
+| invlog                | 8364    |
+| prclog                | 6783    |
+| pmtfil                | 2703    |
+| invoice_cust          | 1662    |
+| line_items            | 574     |
+| invoices              | 436     |
+| invoice_cart          | 290     |
+| country               | 248     |
+| countries             | 214     |
+| products              | 206     |
+| invoice_cart_hdr      | 164     |
+| state                 | 65      |
+| adjfil                | 43      |
+| category              | 40      |
+| pbook                 | 35      |
+| empfil                | 23      |
+| stofil                | 5       |
+| users                 | 5       |
+| webdisplay            | 2       |
+| shopping_cart         | 1       |
++-----------------------+---------+
+
+Database: express2
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| logfil                | 1007    |
+| hisfil                | 350     |
+| trxfil                | 350     |
+| state                 | 52      |
+| pmtfil                | 45      |
+| pbook                 | 19      |
+| empfil                | 9       |
+| dealer                | 5       |
+| cmpfil                | 1       |
++-----------------------+---------+
+
+Database: afi
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| state                 | 52      |
+| logfil                | 9       |
+| empfil                | 2       |
+| cmpfil                | 1       |
+| dealer                | 1       |
+| intfil                | 1       |
+| pmtfil                | 1       |
++-----------------------+---------+
+
+Database: rush
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| ea_quotes             | 22      |
+| ea_names              | 20      |
+| ea_images             | 16      |
+| ea_thumb              | 5       |
+| ea_sig                | 4       |
+| ea_empfil             | 2       |
++-----------------------+---------+
+
+Database: usapreps
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| coach                 | 2743    |
+| college               | 1608    |
+| events                | 16      |
+| division              | 14      |
++-----------------------+---------+
+
+Database: chovinyl
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| countries             | 214     |
+| products              | 69      |
+| shopping_cart         | 68      |
+| cart_users            | 59      |
+| state                 | 52      |
+| shopping_cart_hdr     | 44      |
+| category              | 5       |
+| consumer              | 4       |
+| line_items            | 3       |
+| orders                | 3       |
+| shipping_option       | 2       |
+| shipping_option_setup | 1       |
++-----------------------+---------+
+
+Database: medspeak
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| pricing               | 286     |
+| products              | 286     |
+| address               | 234     |
+| contacts              | 234     |
+| useraccounts          | 234     |
+| userdb                | 234     |
+| countries             | 214     |
+| orderdetails          | 214     |
+| orders                | 187     |
+| states                | 52      |
+| subcategories         | 11      |
+| categories            | 1       |
+| news                  | 1       |
+| taxrates              | 1       |
++-----------------------+---------+
+
+Database: tiredemo
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| invfil                | 714     |
+| prclog                | 583     |
+| invlog                | 368     |
+| logfil                | 289     |
+| country               | 248     |
+| countries             | 214     |
+| state                 | 65      |
+| invoice_cust          | 55      |
+| cusfil                | 44      |
+| category              | 39      |
+| his_line              | 37      |
+| hisfil                | 30      |
+| pbook                 | 23      |
+| invoice_cart          | 20      |
+| invoice_cart_hdr      | 20      |
+| empfil                | 8       |
+| stofil                | 4       |
+| webdisplay            | 3       |
+| shopping_cart         | 1       |
++-----------------------+---------+
+
+Database: elpaso
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| images                | 319     |
+| state                 | 52      |
+| products              | 31      |
+| category              | 20      |
+| stores                | 2       |
+| users                 | 2       |
+| orderdetail           | 1       |
+| orders                | 1       |
+| shopping_cart         | 1       |
++-----------------------+---------+
+
+Database: clsbu
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| hisfil                | 47060   |
+| trxfil                | 47056   |
+| logfil                | 26147   |
+| cstlog                | 7473    |
+| pending               | 3960    |
+| cusfil                | 3611    |
+| intfil                | 3137    |
+| pmtfil                | 3132    |
+| docs                  | 3003    |
+| funding               | 647     |
+| capfil                | 519     |
+| dealer                | 102     |
+| state                 | 52      |
+| empfil                | 18      |
+| dlrlog                | 17      |
+| mntfil                | 4       |
+| cmpfil                | 1       |
+| dlrdrw                | 1       |
++-----------------------+---------+
+
+Database: celedrin
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| zips                  | 42831   |
+| store_locator         | 12403   |
+| state                 | 52      |
+| category              | 1       |
+| customer              | 1       |
+| pli_user              | 1       |
+| products              | 1       |
+| users                 | 1       |
++-----------------------+---------+
+
+Database: realestate
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| empfil                | 2       |
++-----------------------+---------+
+
+Database: bart
+Table: customer
+[6 entries]
++--------+--------+--------------+---------+--------------+----------+-----------------------+-----------+-----------+
+| cus_id | cus_st | cus_phn      | cus_zip | cus_addr     | cus_city | cus_email             | cus_lname | cus_fname |
++--------+--------+--------------+---------+--------------+----------+-----------------------+-----------+-----------+
+| 1      |        | 321-321-3211 |         |              |          | jb@jb.com             | Blow      | Joe       |
+| 2      | CA     | 805-555-5555 |         |              |          | Willieshow!@gmail.com | Wilson    | Kenny     |
+| 3      |        | 323-444-1232 |         |              |          | Willieb@me.com        | Jones     | Willie    |
+| 4      | CA     | 321-333-2222 | 98765   | 321 What St. | Anycity  | hm@mail.com           | Mills     | Hannah    |
+| 5      | CA     | 321-333-2222 | 98765   | 321 What St. | Anycity  | hm@mail.com           | Eagan     | Jim       |
+| 6      | CA     | 434-234-2343 |         |              |          | jd@email.com          | Doe       | John      |
++--------+--------+--------------+---------+--------------+----------+-----------------------+-----------+-----------+
+
+Database: bart
+Table: empfil
+[2 entries]
++--------+--------+------------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+------------+------------+----------+-------------+---------------+----------+-----------+-----------+------------------------+------------+------------+
+| emp_id | emp_st | emp_pw     | emp_APP | emp_R26 | emp_F11 | emp_F10 | emp_F13 | emp_F12 | emp_F15 | emp_F14 | emp_F17 | emp_F16 | emp_F18 | emp_EML | emp_R20 | emp_R21 | emp_R08 | emp_R09 | emp_R24 | emp_R25 | emp_PRT | emp_R27 | emp_MGT | emp_R03 | emp_bio | emp_R01 | emp_R06 | emp_R07 | emp_PCK | emp_R05 | emp_SLR | emp_zip | emp_R28 | emp_pic | emp_R29 | emp_UTL | emp_R22 | emp_REP | emp_R23 | emp_F08 | emp_F09 | emp_F06 | emp_F07 | emp_F04 | emp_F05 | emp_F02 | emp_F03 | emp_F01 | emp_PST | emp_R19 | emp_R30 | emp_OUT | emp_R18 | emp_BAL | emp_R15 | emp_R04 | emp_R17 | emp_R16 | emp_R11 | emp_R10 | emp_R13 | emp_R12 | emp_R02 | emp_SRC | emp_PSC | emp_R14 | emp_TRN | emp_ssn | emp_REC | emp_CST | emp_term   | emp_hire   | emp_wage | emp_city    | emp_name      | emp_snum | emp_title | emp_phone | emp_email              | emp_active | emp_street |
++--------+--------+------------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+------------+------------+----------+-------------+---------------+----------+-----------+-----------+------------------------+------------+------------+
+| 1      | CA     | metallica1 | 1       | 0       | 1       | 1       | 1       | 1       | 1       | 1       | 1       | 1       | 0       | 0       | 0       | 0       | 0       | 0       | 0       | 0       | 0       | 0       | 1       | 0       |         | 0       | 0       | 0       | 0       | 0       | 0       |         | 0       |         | 0       | 0       | 0       | 0       | 0       | 1       | 1       | 1       | 1       | 1       | 1       | 1       | 1       | 1       | 0       | 0       | 0       | 0       | 0       | 0       | 0       | 0       | 0       | 0       | 0       | 0       | 0       | 0       | 0       | 0       | 0       | 0       | 0       |         | 0       | 0       | 0000-00-00 | 0000-00-00 | 0.0000   | Simi Valley | John Oliva    | 0        | JO        |           | john@syntaxsys.com     | 1          |            |
+| 2      | CA     | Bart805    | 1       | 0       | 1       | 1       | 1       | 1       | 1       | 1       | 1       | 1       | 0       | 0       | 0       | 0       | 0       | 0       | 0       | 0       | 0       | 0       | 1       | 1       |         | 1       | 1       | 0       | 0       | 1       | 0       |         | 0       |         | 0       | 0       | 0       | 0       | 0       | 1       | 1       | 1       | 1       | 1       | 1       | 1       | 1       | 1       | 0       | 0       | 0       | 0       | 0       | 0       | 0       | 1       | 0       | 0       | 1       | 0       | 0       | 0       | 1       | 0       | 1       | 0       | 0       |         | 0       | 0       | 0000-00-00 | 0000-00-00 | 0.0000   | Simi Valley | Bart Spindler | 0        |           |           | bart@bigvalleyauto.com | 1          |            |
++--------+--------+------------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+------------+------------+----------+-------------+---------------+----------+-----------+-----------+------------------------+------------+------------+
+
+Database: bart
+Table: invfil
+[4 entries]
++--------+---------+----------+------------+-----------------------+-----------+------------+
+| inv_id | inv_num | inv_type | inv_ldate  | inv_descr             | inv_price | inv_active |
++--------+---------+----------+------------+-----------------------+-----------+------------+
+| 1      | L720    | 1        | 2017-08-10 | Lunch August 10, 2017 | 12        | 1          |
+| 2      | L727    | 1        | 2017-08-17 | Lunch August 17, 2017 | 12        | 1          |
+| 3      | Movie1  | 2        | 0000-00-00 | Movie Ticket          | 13.5      | 1          |
+| 5      | L83     | 1        | 2017-08-24 | Lunch August 24, 2017 | 12        | 1          |
++--------+---------+----------+------------+-----------------------+-----------+------------+
+
+Database: bart
+Table: ordfil
+[6 entries]
++--------+------------+----------+-----------+------------+------------+------------+
+| ord_id | ord_date   | ord_time | ord_month | ord_status | ord_amount | ord_cstnum |
++--------+------------+----------+-----------+------------+------------+------------+
+| 1      | 2017-08-02 | 22:53:24 | 8         | 9          | 0.00       | 4          |
+| 2      | 2017-08-02 | 23:11:55 | 8         | 9          | 0.00       | 3          |
+| 3      | 2017-08-02 | 23:12:04 | 8         | 9          | 0.00       | 5          |
+| 4      | 2017-08-02 | 23:12:39 | 8         | 9          | 0.00       | 3          |
+| 5      | 2017-08-03 | 00:25:52 | 8         | 9          | 0.00       | 4          |
+| 6      | 2017-08-03 | 00:26:35 | 8         | 9          | 0.00       | 4          |
++--------+------------+----------+-----------+------------+------------+------------+
+
+Database: bart
+Table: state
+[66 entries]
++--------+----------+---------------------------+
+| sta_id | sta_code | sta_name                  |
++--------+----------+---------------------------+
+| 1      | AL       | Alabama                   |
+| 2      | AK       | Alaska                    |
+| 3      | AZ       | Arizona                   |
+| 4      | AR       | Arkansas                  |
+| 5      | CA       | California                |
+| 6      | CO       | Colorado                  |
+| 7      | CT       | Connecticut               |
+| 8      | DE       | Delaware                  |
+| 9      | DC       | District of Columbia      |
+| 10     | FL       | Florida                   |
+| 11     | GA       | Georgia                   |
+| 12     | HI       | Hawaii                    |
