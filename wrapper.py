@@ -45,12 +45,13 @@ DUMP_SQLMAP_FOLDER = os.path.join(
         os.path.realpath(__file__)), 
         wrapper_config.DUMP_FOLDER)
 
-print DUMP_SQLMAP_FOLDER
 
 DUMP_SQLMAP_SAVE = os.path.join(
     os.path.dirname(
         os.path.realpath(__file__)), 
         wrapper_config.SQLMAP_DUMPS)
+
+print DUMP_SQLMAP_SAVE
 
 DUMP_TXT_FOLDER = os.path.join(
     os.path.dirname(
@@ -144,6 +145,7 @@ def sqlmap_check(url, pos, check_timeout, proxy=None):
                 '--count',
                 '--tamper=%s' % wrapper_config.TAMPER,
                 '--dump-format=CSV',
+                '--answers=quit=n,crack=n',
                 '--search',
                 '-C %s' % dump,
                 '--output-dir=%s' % wrapper_config.SQLMAP_DUMPS,
@@ -179,6 +181,7 @@ def sqlmap_check(url, pos, check_timeout, proxy=None):
                 '--count',
                 '--tamper=%s' % wrapper_config.TAMPER,
                 '--dump-format=CSV',
+                '--answers=quit=n,crack=n',
                 '--search',
                 '-C %s' % dump,
                 #'--answers="quit=n, crack=n"'
@@ -217,7 +220,7 @@ def sqlmap_check(url, pos, check_timeout, proxy=None):
                 '--search',
                 '-C %s' % dump,
                 '--dump-format=CSV',
-                '--answers="quit=n, crack=n"'
+                '--answers=quit=n,crack=n',
                 '--output-dir=%s' % wrapper_config.SQLMAP_DUMPS,
                 #'--proxy=socks5://localhost:9091',
                 '--exclude-sysdbs',
