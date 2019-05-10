@@ -32,11 +32,11 @@ try:
 except:
     dump = wrapper_config.COLUMN_DUMP
 
-if (wrapper_config.Check_SQLi == True and wrapper_config.DUMP == True):
-    print('Check_SQLi or DUMP')
+if (wrapper_config.Check_SQLi == True and wrapper_config.DUMP == True and wrapper_config.DUMP_ALL == True):
+    print('Check_SQLi or DUMP or DUMP_ALL')
     sys.exit()
-elif (wrapper_config.Check_SQLi == False and wrapper_config.DUMP == False):
-    print('Check_SQLi or DUMP')
+elif (wrapper_config.Check_SQLi == False and wrapper_config.DUMP == False and wrapper_config.DUMP_ALL == False):
+    print('Check_SQLi or DUMP or DUMP_ALL')
     sys.exit()
 
 
@@ -397,7 +397,10 @@ def sqlmap_dump(url, check_timeout, proxy=None):
         except: pass
         
 
-def sqlmap_dump_all(url, check_timeout, proxy=None):
+def sqlmap_dump_all(url, pos, check_timeout, proxy=None):
+    print "Dump All"
+    print('set %s' % url)
+    print('left %s url(s)' % pos)
     start_time = datetime.now().time()
     if wrapper_config.PROXY and wrapper_config.PROXY_USERNAME  and wrapper_config.PROXY_PASSWORD:
         process = Popen(
@@ -889,7 +892,7 @@ def threads():
                 else:
                     pool.apply_async(sqli_check, (
                         clean_url(url), 
-                        position, 56000, ))
+                        position, 56000))
 
             if wrapper_config.DUMP == True:
                 if wrapper_config.PROXY:
@@ -898,6 +901,15 @@ def threads():
                         position, 56000, choice(proxies)))
                 else:
                     pool.apply_async(sqlmap_check, 
+                        (clean_url(url), position, 56000))
+                    
+            if wrapper_config.DUMP_ALL == True:
+                if wrapper_config.PROXY:
+                    pool.apply_async(sqlmap_dump_all, (
+                        clean_url(url), 
+                        position, 56000, choice(proxies)))
+                else:
+                    pool.apply_async(sqlmap_dump_all, 
                         (clean_url(url), position, 56000))
 
 
