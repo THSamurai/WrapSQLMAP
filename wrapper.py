@@ -900,15 +900,6 @@ def threads():
                     pool.apply_async(sqlmap_check, 
                         (clean_url(url), position, 56000))
 
-            if wrapper_config.DUMP_ALL == True:
-                if wrapper_config.PROXY:
-                    pool.apply_async(sqlmap_dump_all, (
-                        clean_url(url), 
-                        position, 56000, choice(proxies)))
-                else:
-                    pool.apply_async(sqlmap_dump_all, 
-                        (clean_url(url), position, 56000))
-
 
         pool.close()
         pool.join()
