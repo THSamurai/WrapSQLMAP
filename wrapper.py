@@ -51,7 +51,7 @@ DUMP_SQLMAP_SAVE = os.path.join(
         os.path.realpath(__file__)), 
         wrapper_config.SQLMAP_DUMPS)
 
-print DUMP_SQLMAP_SAVE
+print DUMP_SQLMAP_FOLDER
 
 DUMP_TXT_FOLDER = os.path.join(
     os.path.dirname(
