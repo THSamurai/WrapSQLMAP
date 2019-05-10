@@ -896,6 +896,7 @@ def threads():
                     pool.apply_async(sqlmap_check, (
                         clean_url(url), 
                         position, 56000, choice(proxies)))
+                else:
                     pool.apply_async(sqlmap_check, 
                         (clean_url(url), position, 56000))
 
@@ -904,6 +905,7 @@ def threads():
                     pool.apply_async(sqlmap_dump_all, (
                         clean_url(url), 
                         position, 56000, choice(proxies)))
+                else:
                     pool.apply_async(sqlmap_dump_all, 
                         (clean_url(url), position, 56000))
 
