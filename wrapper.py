@@ -81,6 +81,7 @@ def checkencoom(url):
     return w
 
 def brute(url):
+    print "start Brute"
     found = []
     headers = { "Content-type": "application/x-www-form-urlencoded", "Accept": "text/plain", "User-Agent": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727; .NET CLR 3.0.04506.30)" }
     cms = checkcms(url)
@@ -395,7 +396,7 @@ def sqlmap_dump(url, check_timeout, proxy=None):
         try:
             psu_process.kill()
         except: pass
-        
+
 
 def sqlmap_dump_all(url, pos, check_timeout, proxy=None):
     print "Dump All"
@@ -498,7 +499,9 @@ def sqlmap_dump_all(url, pos, check_timeout, proxy=None):
         try:
             psu_process.kill()
         except: pass
-        
+
+    print('done/make txt dump for %s | start: %s | end: %s ' %  (url, start_time, end_time))
+    find_dump()
 
 def sqli_check(url, pos, check_timeout, proxy=None):
     print "Find SQLi"
@@ -592,7 +595,7 @@ def sqli_check(url, pos, check_timeout, proxy=None):
         try:
             psu_process.kill()
         except: pass
-
+    print('done/make txt dump for %s | start: %s | end: %s ' %  (url, start_time, end_time))
     find_log(url)
 
 def domains_dublicate(url):
@@ -739,12 +742,21 @@ def find_log(url):
                     if os.path.getsize(dirpath + '/' + filelog) > 0:
                         open(wrapper_config.SQLi_SAVE_FILE, 'a+').write(url + '\n')
                         del_dub(wrapper_config.SQLi_SAVE_FILE)
-                
+      
+def get_size(start_path):
+    total_size = 0
+    for dirpath, dirnames, filenames in os.walk(start_path):
+        for f in filenames:
+            fp = os.path.join(dirpath, f)
+            total_size += os.path.getsize(fp)
+    return total_size
+
+
 def find_dump():
     for file in glob.glob(DUMP_SQLMAP_SAVE+"/**"):
-        for dirpath, dirnames, files in os.walk(file+'/dump'):
-            if not files:
-                shutil.rmtree(file)
+        if get_size(file + '/dump') == 0:
+            shutil.rmtree(file)
+
 
 def del_dub(file):
     text_file = open(file)
